@@ -14,3 +14,5 @@ app.listen(PORT, () => {
 })
 
 require('./db');
+
+const Run = require('./models/Run');
