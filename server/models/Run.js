@@ -1,6 +1,10 @@
 const mongoose = require('mongoose');
 
 const runSchema = new mongoose.Schema({
+    runID: {
+        type: Number,
+        required: true
+    },
     host: {
         type: Object,
         required: true
@@ -13,7 +17,7 @@ const runSchema = new mongoose.Schema({
         type: Date,
         required: true
     },
-    runs: {
+    trips: {
         type: Object,
         required: true
     },
@@ -21,7 +25,7 @@ const runSchema = new mongoose.Schema({
         type: String,
         required: true
     }
-})
+}, { collection: 'runs' })
 
 const Run = mongoose.model('Run', runSchema);
 
